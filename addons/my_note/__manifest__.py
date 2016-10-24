@@ -21,7 +21,7 @@
     'sequence': 46,
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['note'],
 
     # always loaded
     'data': [

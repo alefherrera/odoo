@@ -4,13 +4,12 @@
 
     <record model="ir.ui.view" id="my_note.list">
       <field name="name">myNote list</field>
-      <field name="model">my_note.my_note</field>
+      <field name="model">note.note</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
           <field name="value"/>
           <field name="value2"/>
-          <field name="value3"/>
         </tree>
       </field>
     </record>
@@ -20,7 +19,7 @@
 
     <record model="ir.actions.act_window" id="my_note.action_window">
       <field name="name">myNote window</field>
-      <field name="res_model">my_note.my_note</field>
+      <field name="res_model">note.note</field>
       <field name="view_mode">tree,form</field>
     </record>
 
@@ -29,7 +28,7 @@
 
     <record model="ir.actions.server" id="my_note.action_server">
       <field name="name">myNote server</field>
-      <field name="model_id" ref="model_my_note_my_note"/>
+      <field name="model_id" ref="model_note_note"/>
       <field name="code">
         action = {
           "type": "ir.actions.act_window",

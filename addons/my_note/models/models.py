@@ -3,7 +3,8 @@
 from odoo import models, fields, api
 
 class my_note(models.Model):
-    _name = 'my_note.my_note'
+    _name = 'note.note'
+    _inherit = ['note.note']
 
     name = fields.Char()
     value = fields.Integer()
