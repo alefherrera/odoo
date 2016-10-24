@@ -10,10 +10,10 @@ class MyNote(http.Controller):
     def list(self, **kw):
         return http.request.render('my_note.listing', {
             'root': '/my_note/my_note',
-            'objects': http.request.env['note.note'].search([]),
+            'objects': http.request.env['my_note.my_note'].search([]),
         })
 
-    @http.route('/my_note/my_note/objects/<model("note.note"):obj>/', auth='public')
+    @http.route('/my_note/my_note/objects/<model("my_note.my_note"):obj>/', auth='public')
     def object(self, obj, **kw):
         return http.request.render('my_note.object', {
             'object': obj
