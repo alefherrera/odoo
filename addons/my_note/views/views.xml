@@ -8,6 +8,7 @@
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
+          <field name="value" />
           <field name="memo"/>
         </tree>
       </field>
@@ -17,11 +18,11 @@
     <record model="ir.ui.view" id="my_note.form">
       <field name="name">myNote form</field>
       <field name="model">note.note</field>
+      <field name="inherit_id" ref="note.view_note_note_form"/>
       <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="memo"/>
-        </tree>
+        <field name="memo" position="replace">
+           <field name="value" />
+        </field>
       </field>
     </record>
 
